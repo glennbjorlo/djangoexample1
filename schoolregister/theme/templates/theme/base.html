@@ -47,7 +47,9 @@
             <li class="{% block student_listing_is_active %}{% endblock%}">
                 <a href="{% url 'student_listing' %}">Student list</a>
             </li>
-            <li><a href="#">Link</a></li>
+            <li class="{% block lecturer_listing_is_active %}{% endblock%}">
+            	<a href="{% url 'lecturer_listing' %}">Lecturer list</a>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Link</a></li>

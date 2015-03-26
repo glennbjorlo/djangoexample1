@@ -1,0 +1,29 @@
+{% extends 'theme/base.html' %}
+{% block subheader %}Lecturer details{% endblock %}
+{% block pagecontent %}
+
+	<h2>Details on lecturer {{ lecturer.id }}</h2>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Department</th>
+				<th>Number of courses</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{ lecturer.name }}</td>
+				<td>{{ lecturer.email }}</td>
+				<td>{{ lecturer.department }}</td>
+				<td>0</td>
+			</tr>
+		</tbody>
+	</table>
+	
+{% endblock %}
+
+
+
