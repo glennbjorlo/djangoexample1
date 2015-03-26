@@ -18,10 +18,26 @@
 				<td>{{ lecturer.name }}</td>
 				<td>{{ lecturer.email }}</td>
 				<td>{{ lecturer.department }}</td>
-				<td>0</td>
+				<td id="nr_courses_cell">{{ lecturer.number_of_courses }}</td>
 			</tr>
 		</tbody>
 	</table>
+
+	<a id="increase_nr_of_courses_button" class="btn btn-default" href="#" role="button">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 
+        Increase number of courses
+    </a>
+
+    <input type="hidden" id="nr_courses_url" value="/lecturers/{{ lecturer.id }}/increase_number_of_courses">
+
+    <br><br>
+
+    <a id="decrease_nr_of_courses_button" class="btn btn-default" href="#" role="button">
+    	<span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+    	Decrease number of courses
+    </a>
+
+    <input type="hidden" id="de_nr_courses_url" value="/lecturers/{{ lecturer.id }}/decrease_number_of_courses">
 	
 {% endblock %}
 
